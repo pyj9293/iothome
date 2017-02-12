@@ -7,6 +7,10 @@
 <title>IotHome</title>
 </head>
 <body>
+<<<<<<< HEAD
 test
+=======
+
+>>>>>>> refs/heads/initialDesign
 </body>
 </html>
