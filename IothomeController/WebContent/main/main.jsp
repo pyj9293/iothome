@@ -7,6 +7,6 @@
 <title>IotHome</title>
 </head>
 <body>
-testtest
+test
 </body>
 </html>
