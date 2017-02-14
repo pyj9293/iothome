@@ -16,7 +16,7 @@
 			id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav">
 				<li><a href="../index/index.jsp">HOME</a></li>
- 				<li><a href="#">SETTING</a></li>
+ 				<li><a href="#setting">SETTING</a></li>
 				<li><a href="#">CONTACT</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">

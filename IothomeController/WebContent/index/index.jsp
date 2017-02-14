@@ -48,7 +48,7 @@
 		calendar span
 	</div>
 
-	<div class="row">
+	<div class="row" id="setting">
 		<div class="col-sm-6 col-md-4" id="setting-list">
 			<a href="#" class="thumbnail"> 
 				<div class="caption">
