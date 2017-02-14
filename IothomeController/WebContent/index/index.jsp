@@ -47,5 +47,80 @@
 	<div class="calender">
 		calendar span
 	</div>
+
+	<div class="row">
+		<div class="col-sm-6 col-md-4" id="setting-list">
+			<a href="#" class="thumbnail"> 
+				<div class="caption">
+					<img src="http://placehold.it/80x80">
+					<h3>Wifi</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 col-md-4" id="setting-list">
+			<a href="#" class="thumbnail"> 
+				<div class="caption">
+					<img src="http://placehold.it/80x80">
+					<h3>Wifi</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 col-md-4" id="setting-list">
+			<a href="#" class="thumbnail"> 
+				<div class="caption">
+					<img src="http://placehold.it/80x80">
+					<h3>Wifi</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 col-md-4" id="setting-list">
+			<a href="#" class="thumbnail"> 
+				<div class="caption">
+					<img src="http://placehold.it/80x80">
+					<h3>Wifi</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 col-md-4" id="setting-list">
+			<a href="#" class="thumbnail"> 
+				<div class="caption">
+					<img src="http://placehold.it/80x80">
+					<h3>Wifi</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 col-md-4" id="setting-list">
+			<a href="#" class="thumbnail"> 
+				<div class="caption">
+					<img src="http://placehold.it/80x80">
+					<h3>Wifi</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 col-md-4" id="setting-list">
+			<a href="#" class="thumbnail"> 
+				<div class="caption">
+					<img src="http://placehold.it/80x80">
+					<h3>Wifi</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 col-md-4" id="setting-list">
+			<a href="#" class="thumbnail"> 
+				<div class="caption">
+					<img src="http://placehold.it/80x80">
+					<h3>Wifi</h3>
+				</div>
+			</a>
+		</div>
+		<div class="col-sm-6 col-md-4" id="setting-list">
+			<a href="#" class="thumbnail"> 
+				<div class="caption">
+					<img src="http://placehold.it/80x80">
+					<h3>Wifi</h3>
+				</div>
+			</a>
+		</div>
+	</div>
 </body>
 </html>
