@@ -13,6 +13,8 @@
 <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<jsp:useBean id="test" class="test.Test" scope="page"></jsp:useBean>
 </head>
 <body>
 	<jsp:include page="nav.jsp"></jsp:include>
@@ -122,5 +124,6 @@
 			</a>
 		</div>
 	</div>
+	<p> 테스트 메세지 출력 = <%=test.getTestingStr()%> </p>
 </body>
 </html>

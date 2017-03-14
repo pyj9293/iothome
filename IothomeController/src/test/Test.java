@@ -2,9 +2,12 @@ package test;
 
 public class Test {
 
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+	private String testingStr = "JavaBean.";
+	
+	public Test() {}
+	
+	public String getTestingStr() {
+		return testingStr;
 	}
-
+	
 }
