@@ -53,23 +53,20 @@
 
 .calender {
 	width: 100%;
-	height: 350px;
-	background: teal;
+	height: 800px;
 	margin-bottom: 30px;
-	
-/* 	실제 적용시 삭제*/
-	text-align: center;
-	font-size: 20px;
 }
 
 .caption>h3 {
 	text-align: center;
 }
 
-.row {
-	width: 100%;
-}
-
 #setting-list {
 	text-align: center;
+}
+
+/* calendar */
+#calendar-frame {
+	width: 100%;
+	height: 100%;
 }

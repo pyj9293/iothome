@@ -5,10 +5,13 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>IotHome</title>
-<link rel="stylesheet" type="text/css" href="indexStylesheet.css">
+
+<!-- index -->
 <link rel="stylesheet" type="text/css" href="normalize.css">
+<link rel="stylesheet" type="text/css" href="indexStylesheet.css">
 <script type="text/javascript" src="../index/indexJavaScript.js"></script>
 
+<!-- bootstrap -->
 <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 <link rel="stylesheet"href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
@@ -47,7 +50,7 @@
 	</div>
 	
 	<div class="calender">
-		calendar span
+		<iframe id="calendar-frame" src="../calendar/html/selectable.html" frameborder=0 scrolling=no></iframe>
 	</div>
 
 	<div class="row" id="setting">
