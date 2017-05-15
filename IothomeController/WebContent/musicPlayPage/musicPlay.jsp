@@ -17,7 +17,7 @@
 	function callAjax() {
 		$.ajax({
 			type : "POST",
-			url : "http://localhost:8080/IothomeController/musicPlayPage/dynamicStateData.jsp",
+			url : "http://121.187.77.136:8080/IothomeController/musicPlayPage/dynamicStateData.jsp",
 			success : whenSuccess, //성공시 callback
 			error : whenError //실패시 callback
 		});
