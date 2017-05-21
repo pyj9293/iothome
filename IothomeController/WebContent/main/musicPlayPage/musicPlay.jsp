@@ -17,7 +17,7 @@
 	function callAjax() {
 		$.ajax({
 			type : "POST",
-			url : "http://121.187.77.136:8080/IothomeController/musicPlayPage/dynamicStateData.jsp",
+			url : "http://localhost:8080/IothomeController/main/musicPlayPage/dynamicStateData.jsp",
 			success : whenSuccess, //성공시 callback
 			error : whenError //실패시 callback
 		});
@@ -52,7 +52,6 @@
 	
 	
 	var player = null;
-
     // 유튜브 플레이어를 생성한다.
     function onYouTubePlayerAPIReady() {
         try {
@@ -76,7 +75,6 @@
     		alert("유투브 플레이어 생성 실패.");
         }
     }
-
     // 유튜브 플레이어가 다 만들어지면 호출됨
     function onPlayerReady(event) {
         event.target.playVideo(); 
@@ -84,7 +82,6 @@
     	playing = 1;
 		callAjax();
     }
-
     // 동영상의 재생이 완료되었을 때 호출됨
     function onPlayerStateChange(event) { 	
     	if (event.data === 0) {

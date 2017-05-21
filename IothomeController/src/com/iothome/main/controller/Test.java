@@ -1,4 +1,4 @@
-package test;
+package com.iothome.main.controller;
 
 public class Test {
 

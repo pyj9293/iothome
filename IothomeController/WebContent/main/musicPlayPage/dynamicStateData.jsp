@@ -7,7 +7,6 @@
 	Connection conn = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
-
 	try {
 		String url = "jdbc:mysql://121.187.77.136:3306/iothome"; // 사용하려는 데이터베이스명을 포함한 URL 기술
 		String id = "root"; // 사용자 계정
@@ -24,7 +23,6 @@
 %>
 	<%=state%>
 <%
-
 		}
 	} catch (Exception e) { // 예외가 발생하면 예외 상황을 처리한다.
 		e.printStackTrace();
