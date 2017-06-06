@@ -1,72 +1,60 @@
 @CHARSET "UTF-8";
 
-/* nav.jsp */
-#navbar {
-	margin-bottom: 0px;
+html {
+    min-width: 610px;
+}
+
+a {
+    text-decoration: none;
 }
 
 .input-group {
-/* 	max-width: 1000px; */
-	margin-top: 15px;
-	margin-bottom: 15px;
-	padding-left: 50px;
-	padding-right: 50px;
+    /* 	max-width: 1000px; */
+    margin-top: 15px;
+    margin-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;
 }
+
 
 /* index.jsp */
 #title-div {
-	text-align: center;
-	height: 400px;
-	background: silver;
-	padding: 10px;
+    text-align: center;
+    height: 400px;
+    background: silver;
+    padding: 10px;
+    background-image: url(../../resource/topTitleImg.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center;
+    color: white;
+    text-shadow: 2px 2px 3px gray;	
 }
 
 #title-div h1 {
-	padding-top: 150px;
-	margin-top: 0px;
+    padding-top: 150px;
+    margin-top: 0px;
 }
 
 #title-div h4 {
-	padding-top: 0px;
-	margin-top: 0px;
+    padding-top: 0px;
+    margin-top: 0px;
 }
 
-#content-button {
-	margin: 10px;
+.panel-group {
+    margin-top: 10px;
+}
+
+.panel-title {
+    text-align: center;
+}
+
+.panel-title>a {
+	display: block;
+}
+
+.panel-body {
 	text-align: center;
+	padding-bottom: 0;
 }
 
-.thumbnail > p {
-	position: absolute;
-	width: 85%;
-	top: 100px;
-	text-align: center;
-}
-
-.thumbnail > img {
-	width: 100%;
-}
-
-.thumbnail > img:HOVER {
-	opacity: 0.5;
-}
-
-.calender {
-	width: 100%;
-	height: 800px;
-	margin-bottom: 30px;
-}
-
-.caption>h3 {
-	text-align: center;
-}
-
-#setting-list {
-	text-align: center;
-}
-
-/* calendar */
-#calendar-frame {
-	width: 100%;
-	height: 100%;
-}

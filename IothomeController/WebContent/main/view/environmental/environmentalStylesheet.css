@@ -1,0 +1,66 @@
+@CHARSET "UTF-8";
+
+.rt-info {
+	display: inline-block;
+	flaot: left;
+	width: 200px;
+	height: 150px;
+	color: black;
+	text-shadow: 2px 2px 2px gray;
+}
+
+.rt-info>p {
+	font-size: 50px;
+	font-weight: bold;
+}
+
+#environmental-refresh {
+	width: 25px;
+	height: 25px;
+	float: right;
+	border: 0;
+	outline: 0;
+	background-color: white;
+	background-image: url("../../resource/refresh.png");
+	background-size: 100%;
+}
+
+#environmental-refresh:active {
+	opacity: 0.3;
+}
+
+#temperature {
+	margin-right: 5%
+}
+
+#environmental-table .left {
+	width: 45%;
+	text-align: right;
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+#environmental-table .right {
+	width: 50%;
+	text-align: left;
+}
+
+#environmental-text {
+	text-align: center;
+	padding: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+#environmental-warning {
+	text-align: center;
+	padding: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 10px;
+}
+
+#environmental-submit {
+	padding-left: 15px;
+	padding-right: 15px;
+}
