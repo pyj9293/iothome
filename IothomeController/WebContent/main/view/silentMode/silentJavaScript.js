@@ -10,7 +10,6 @@ $(function() {
 			alert("켜질때");
 		} else {
 			$("#radioDiv label").attr('class','btn btn-danger');
-			
 			alert("꺼질때");
 		}
 	});
