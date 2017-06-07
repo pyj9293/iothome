@@ -4,7 +4,10 @@
 <html>
 
 <head>
+	<meta charset="utf-8">    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
     <title>IotHome</title>
 
     <!-- css -->
@@ -15,13 +18,15 @@
     <link rel="stylesheet" type="text/css" href="../silentMode/silentStylesheet.css">
     <link rel="stylesheet" type="text/css" href="../localSetting/localStylesheet.css">
     <link rel="stylesheet" type="text/css" href="../alam/alamStylesheet.css">
-
+    <link rel="stylesheet" type="text/css" href="../moodLight/moodLightStylesheet.css">
 
     <!-- bootstrap -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+ 
     
     <!-- javaScript -->
     <script type="text/javascript" src="indexJavaScript.js"></script>
@@ -29,6 +34,7 @@
     <script type="text/javascript" src="../silentMode/silentJavaScript.js"></script>
     <script type="text/javascript" src="../localSetting/localJavaScript.js"></script>
     <script type="text/javascript" src="../alam/alamJavaScript.js"></script>
+    <script type="text/javascript" src="../moodLight/moodLightJavaScript.js"></script>
 </head>
 
 <body>
@@ -46,7 +52,7 @@
             <div class="panel-heading" role="tab" id="headingOne">
                 <h4 class="panel-title">
                     <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                        온습도
+                        온습도 설정
                     </a>    
                 </h4>
             </div>
@@ -74,25 +80,40 @@
             <div class="panel-heading" role="tab" id="headingThree">
                 <h4 class="panel-title">
                     <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                        지역 설정
+                        무드등 설정
                     </a>
                 </h4>
             </div>
             <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                <div class="panel-body">
+                	<jsp:include page="../moodLight/moodLight.jsp"></jsp:include>
+                </div>
+            </div>
+        </div>
+        
+        <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingFour">
+                <h4 class="panel-title">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        지역 설정
+                    </a>
+                </h4>
+            </div>
+            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                 <div class="panel-body">
                 	<jsp:include page="../localSetting/local.jsp"></jsp:include> 
                 </div>
             </div>
         </div>
         <div class="panel panel-default">
-            <div class="panel-heading" role="tab" id="headingFour">
+            <div class="panel-heading" role="tab" id="headingFive">
                 <h4 class="panel-title">
-                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                    <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
                         알람
                     </a>
                 </h4>
             </div>
-            <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+            <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFive">
                 <div class="panel-body">
                 	<jsp:include page="../alam/alam.jsp"></jsp:include>  
                 </div>

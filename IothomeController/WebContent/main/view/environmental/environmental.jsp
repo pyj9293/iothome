@@ -22,12 +22,20 @@
 		<form method="post" action="index.jsp">
 			<table id="environmental-table" class="table table-hover">
 				<tr>
-					<td class="left">설정할 온도: </td>
-					<td class="right"><input type="text" name="temperature"></td>
+					<td class="left">설정할 최대온도: </td>
+					<td class="right"><input type="text" name="temperature" placeholder="현재 설정 : 24˚C" onkeyPress="if ((event.keyCode<48) || (event.keyCode>57)) event.returnValue=false;"></td>
 				</tr>
 				<tr>
-					<td class="left">설정할 습도: </td>
-					<td class="right"><input type="text" name="humidity"></td>
+					<td class="left">설정할 최저온도: </td>
+					<td class="right"><input type="text" name="temperature" placeholder="현재 설정 : 18˚C"></td>
+				</tr>
+				<tr>
+					<td class="left">설정할 최대습도: </td>
+					<td class="right"><input type="text" name="humidity" placeholder="현재 설정 : 70%"></td>
+				</tr>
+				<tr>
+					<td class="left">설정할 최대습도: </td>
+					<td class="right"><input type="text" name="humidity" placeholder="현재 설정 : 50%"></td>
 				</tr>
 			</table>
 			<p id="environmental-warning" class="bg-warning">
