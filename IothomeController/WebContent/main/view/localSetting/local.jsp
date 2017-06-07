@@ -1,3 +1,4 @@
+<%@page import="java.io.Console"%>
 <%@ page language="java" contentType="text/html; charset=utf-8"
 	pageEncoding="UTF-8"%>
 <%@ page import="com.iothome.model.*"%>
@@ -5,11 +6,15 @@
 <jsp:useBean id="dao" class="com.iothome.model.WeatherDAO" />
 
 <%
-	ArrayList<WeatherDTO> list = dao.getLocalList();
-	WeatherDTO dto = list.get(0);
+	try {
+		ArrayList<WeatherDTO> list = dao.getLocalList();
+		
+		WeatherDTO dto = list.get(0);
+	} catch(IndexOutOfBoundsException e) {
+		e.printStackTrace();
+	}
 %>
 
-<!DOCTYPE html>
 <div id="local">
 	<div class="input-group">
 		<input type="text" class="form-control" id="searchKey" 
