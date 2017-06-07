@@ -7,7 +7,7 @@ public class DBConnect {
 	public DBConnect() {}
 	
 	public Connection getConnection() {
-		String url = "jdbc:mariadb://121.187.77.42:3306/test";
+		String url = "jdbc:mariadb://121.187.77.42:3306/IOTHOME";
 		String id = "root";
 		String pass = "jsea2017";
 		
