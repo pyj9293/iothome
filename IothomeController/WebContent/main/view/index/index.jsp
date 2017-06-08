@@ -35,6 +35,7 @@
     <script type="text/javascript" src="../localSetting/localJavaScript.js"></script>
     <script type="text/javascript" src="../alam/alamJavaScript.js"></script>
     <script type="text/javascript" src="../moodLight/moodLightJavaScript.js"></script>
+    <script type="text/javascript" src="../nav/navJavaScript.js"></script>
 </head>
 
 <body>
