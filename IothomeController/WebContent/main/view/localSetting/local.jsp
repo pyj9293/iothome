@@ -13,7 +13,6 @@
 		ArrayList<WeatherDTO> list = controller.searchWeatherList(key);
 		dto = list.get(0);
 	} catch (Exception e) {
-		e.printStackTrace();
 	}
 %>
 
@@ -25,10 +24,10 @@
 			<button class="btn btn-default" id="searchBtn" type="button">Search</button>
 		</span>
 	</div>
+</div>
 	
 	
 	<% if(dto == null){ %>
-		<p class="text-danger">검색한 값이 없습니다. 다시 검색하여 주십시오.</p>		
 	<% } else {%>
 	<div>
 		<ul class="list-group">
@@ -40,4 +39,3 @@
 		</ul>
 	</div>
 	<%}%>
-</div>
