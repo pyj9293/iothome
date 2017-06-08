@@ -3,14 +3,13 @@
 	pageEncoding="UTF-8"%>
 <%@ page import="com.iothome.model.*"%>
 <%@ page import="java.util.*"%>
-<jsp:useBean id="dao" class="com.iothome.model.WeatherDAO" />
+<jsp:useBean id="controller" class="com.iothome.main.controller.WeatherController" />
 
 <%
 	try {
-		ArrayList<WeatherDTO> list = dao.getLocalList();
-		
-		WeatherDTO dto = list.get(0);
-	} catch(IndexOutOfBoundsException e) {
+		String key = request.getParameter("key");
+		ArrayList<WeatherDTO> list = controller.searchWeatherList(key);
+	}catch(Exception e) {
 		e.printStackTrace();
 	}
 %>
@@ -18,7 +17,7 @@
 <div id="local">
 	<div class="input-group">
 		<input type="text" class="form-control" id="searchKey" 
-			placeholder="Search for local"> <span class="input-group-btn">
+			placeholder="Search for local" name="key"> <span class="input-group-btn">
 			<button class="btn btn-default" id="searchBtn" type="button">Search</button>
 		</span>
 	</div>

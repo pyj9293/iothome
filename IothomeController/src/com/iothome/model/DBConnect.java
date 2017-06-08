@@ -14,6 +14,7 @@ public class DBConnect {
 		Connection con = null;
 		
 		try {
+			Class.forName("org.mariadb.jdbc.Driver");
 			con = DriverManager.getConnection(url,id,pass);
 		}catch(Exception e) {
 			System.out.println(e);
