@@ -9,8 +9,8 @@
 	try {
 		ArrayList<WeatherDTO> list = dao.getLocalList();
 		
-		WeatherDTO dto = list.get(0);
-	} catch(IndexOutOfBoundsException e) {
+		WeatherDTO dto = list.get(0);		
+	} catch (IndexOutOfBoundsException e) {
 		e.printStackTrace();
 	}
 %>
