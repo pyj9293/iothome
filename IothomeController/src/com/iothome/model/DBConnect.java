@@ -19,7 +19,7 @@ public class DBConnect {
 		}catch(Exception e) {
 			e.printStackTrace();
 			System.out.println(e);
-			System.out.println("디비 오류 ");
+			System.out.println("DB Error ");
 		}
 		return con;
 	}
