@@ -7,7 +7,7 @@ public class DBConnect {
 	public DBConnect() {}
 	
 	public Connection getConnection() {
-		String url = "jdbc:mariadb://121.187.77.42:3306/test";
+		String url = "jdbc:mariadb://121.187.77.42:3306/IOTHOME";
 		String id = "root";
 		String pass = "jsea2017";
 		
@@ -19,7 +19,7 @@ public class DBConnect {
 		}catch(Exception e) {
 			e.printStackTrace();
 			System.out.println(e);
-			System.out.println("디비 오류 ");
+			System.out.println("DB Error ");
 		}
 		return con;
 	}

@@ -19,7 +19,7 @@ public class AlarmDAO {
 		ResultSet rs = null;
 		int cnt = 0;
 		try {
-			sql = "SELECT COUNT(*) FROM alarm_list";
+			sql = "SELECT COUNT(*) FROM ALARM_LIST_TB";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			if (rs.next()) {
@@ -38,11 +38,12 @@ public class AlarmDAO {
 		ResultSet rs = null;
 		ArrayList<AlarmDTO> alist = new ArrayList<AlarmDTO>();
 		try {
-			sql = "select * from alarm_list";
+			sql = "select * from ALARM_LIST_TB";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
 				AlarmDTO dto = new AlarmDTO();
+				dto.setIndex(rs.getInt(1));
 				dto.setWeekday(rs.getString(2));
 				dto.setHour(rs.getInt(3));
 				dto.setMinute(rs.getString(4));
@@ -54,5 +55,20 @@ public class AlarmDAO {
 		}
 		return alist;
 	}
-
+	
+	public int deleteAlarm(int alarmIndex) {
+		Connection con = dbconnect.getConnection();
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			sql = "DELETE FROM ALARM_LIST_TB WHERE number = " + alarmIndex;
+			pstmt = con.prepareStatement(sql);
+			rs = pstmt.executeQuery();
+			System.out.println("DAO µé¾î¿È");
+		} catch (Exception e) {
+		} finally {
+			DBClose.close(con, pstmt, rs);
+		}
+		return alarmIndex;
+	}
 }

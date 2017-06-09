@@ -1,6 +1,7 @@
 package com.iothome.model;
 
 public class AlarmDTO {
+	private int index;
 	private String weekday;
 	private int hour;
 	private String minute;
@@ -9,12 +10,21 @@ public class AlarmDTO {
 
 	}
 
-	public AlarmDTO(String weekday, int hour, String minute) {
+	public AlarmDTO(int index, String weekday, int hour, String minute) {
+		this.index = index;
 		this.weekday = weekday;
 		this.hour = hour;
 		this.minute = minute;
 	}
 
+	public int getIndex() {
+		return index;
+	}
+
+	public void setIndex(int index) {
+		this.index = index;
+	}
+	
 	public String getWeekday() {
 		return weekday;
 	}
