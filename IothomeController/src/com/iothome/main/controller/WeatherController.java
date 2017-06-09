@@ -1,16 +1,19 @@
 package com.iothome.main.controller;
 
 import java.util.ArrayList;
-
 import org.java_websocket.client.WebSocketClient;
+import org.json.JSONObject;
 
 import com.iothome.model.*;
 import com.iothome.main.socket.*;
 
 public class WeatherController {
+	private final static String id = "weather";
 	private ArrayList<WeatherDTO> list;
 	private WeatherDAO dao;
 	private CommonWebSocket client;
+	private WeatherJson obj;
+	private String jsonKey;
 
 	public WeatherController() {
 		// TODO Auto-generated constructor stub
@@ -30,9 +33,11 @@ public class WeatherController {
 		}
 	}
 
-	public void connectWebSocket(String key) {
+	public void connectWebSocket(String key) { 
 		try{
-			client = new CommonWebSocket(key);
+			obj = new WeatherJson(id, key);
+			jsonKey = obj.createJsonObj();
+			client = new CommonWebSocket(jsonKey);
 			client.connectWebSocket();
 		} catch (Exception e) {
 			e.printStackTrace();
