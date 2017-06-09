@@ -23,4 +23,5 @@ $(function() {
 	$("#environmental-refresh").click(function(){
 		alert("실시간 표시");	
 	});
+	
 });
