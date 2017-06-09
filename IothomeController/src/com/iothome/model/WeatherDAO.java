@@ -8,6 +8,8 @@ import java.util.ArrayList;
 public class WeatherDAO {
 	private DBConnect dbconnect = null;
 	private String sql = "";
+	private String key = null;
+
 	public WeatherDAO() {
 		// TODO Auto-generated constructor stub
 		dbconnect = new DBConnect();
@@ -18,9 +20,10 @@ public class WeatherDAO {
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		ArrayList<WeatherDTO> alist = new ArrayList<WeatherDTO>();
+		key = searchKey;
 		try {
-			sql = "select city, nation from WETHER_LOCAL_TB "
-					+ "where city = " + searchKey + "or nation = " + searchKey;
+			sql = "SELECT city, nation from WEATHER_LOCAL_TB " + "WHERE city LIKE" + "'%" + key + "%'" + "OR nation =" + "'"
+					+ key + "'";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 			while (rs.next()) {
