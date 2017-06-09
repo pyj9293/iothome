@@ -1,4 +1,4 @@
-$(function() {
+/*$(function() {
 	alert("알람 리스트 가져옴");
 	
 	var result = "";
@@ -13,4 +13,4 @@ $(function() {
 	}
 	
 	$("#alamList").append(result);
-});
+});*/
