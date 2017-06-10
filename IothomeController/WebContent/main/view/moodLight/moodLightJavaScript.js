@@ -1,67 +1,88 @@
 $(function() {
-    $("#colors").find('button').prop('disabled', true);
-    
-    $("#moodSwith").click(function() {
-    	var temp = $("#moodSwith").text();
-    	
-    	if (temp.indexOf("OFF") != -1) {
-        	alert("켜짐");
-			$("#moodSwith").attr('class','btn btn-success');
-        	$("#moodSwith").text("ON");
-            $("#colors").find('button').prop('disabled', false);
-    	} else {
-        	alert("꺼짐");
-			$("#moodSwith").attr('class','btn btn-danger');
-        	$("#moodSwith").text("OFF");
-            $("#colors").find('button').prop('disabled', true);
-    	}
-    });
-    
-    $("#brightnessLeft").click(function() {
-    	var temp = $("#brigNum").text();
-    	
-    	if (temp > 10) {
-    		$("#brigNum").text(temp * 1 - 10);    		
-    	}
-    });
-    
-    $("#brightnessRight").click(function() {
-    	var temp = $("#brigNum").text();
-    	
-    	if (temp < 100) {
-    		$("#brigNum").text(temp * 1 + 10);    		
-    	}
-    });
-    
-    $("#r").click(function() {
-    	alert("빨강~");
-    });
-    
-    $("#g").click(function() {
-    	alert("초록~");
-    });
-    
-    $("#b").click(function() {
-    	alert("파랑~");
-    });
-    
-    $("#p").click(function() {
-    	alert("분홍~");
-    });
-    
-    $("#y").click(function() {
-    	alert("노랑~");
-    });
-    
-    $("#o").click(function() {
-    	alert("오랜지~");
-    });
+	$("#colors").find('button').prop('disabled', true);
 
-    $("#s").click(function() {
-    	alert("하늘색~");
-    });
-    
-    $("#w").click(function() {
-    	alert("하얗~");
-    });
+	$("#moodSwith").click(function() {
+		var temp = $("#moodSwith").text();
+
+		if (temp.indexOf("OFF") != -1) {
+
+			
+			$("#moodSwith").attr('class', 'btn btn-success');
+			$("#moodSwith").text("ON");
+			$("#colors").find('button').prop('disabled', false);
+			var color = "on";
+			runAjax(color);
+
+		} else {
+
+			$("#moodSwith").attr('class', 'btn btn-danger');
+			$("#moodSwith").text("OFF");
+			$("#colors").find('button').prop('disabled', true);
+			var color = "off";
+			runAjax(color);
+		}
+	});
+
+	$("#brightnessLeft").click(function() {
+		var temp = $("#brigNum").text();
+
+		if (temp > 10) {
+			$("#brigNum").text(temp * 1 - 10);
+			var color = $("#brigNum").text();
+			runAjax(color);
+		}
+	});
+
+	$("#brightnessRight").click(function() {
+		var temp = $("#brigNum").text();
+
+		if (temp < 100) {
+		    $("#brigNum").text(temp * 1 + 10);
+			var color = $("#brigNum").text();
+			runAjax(color);
+		}
+	});
+
+	$("#r").click(function() {
+		var color = "red";
+		runAjax(color);
+	});
+
+	$("#g").click(function() {
+		var color = "green";
+		runAjax(color);
+	});
+
+	$("#b").click(function() {
+		var color = "blue";
+		runAjax(color);
+	});
+
+	$("#p").click(function() {
+		var color = "pink";
+		runAjax(color);
+	});
+
+	$("#y").click(function() {
+		var color = "yellow";
+		runAjax(color);
+	});
+
+	$("#o").click(function() {
+		var color = "orange";
+		runAjax(color);
+	});
+
+	$("#s").click(function() {
+		var color = "skyblue";
+		runAjax(color);
+	});
+
+	$("#w").click(function() {
+		var color = "white";
+		runAjax(color);
+	});
+	/*function runAjax(color) {
+		alert(color);
+	}*/
 });
