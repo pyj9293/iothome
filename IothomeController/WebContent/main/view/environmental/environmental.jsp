@@ -5,6 +5,8 @@ pageEncoding="UTF-8" language="java" import="java.sql.*" import="java.util.*"%>
 <jsp:useBean id="controller"
 	class="com.iothome.main.controller.EnvironmentController" />
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<div id = "thinfo">
 <%ArrayList<EnvironmentDTO> alist = dao.getMemberList();
 ArrayList<EnvironmentDTO> alist1 = dao.getMemberList1();
 EnvironmentDTO dto = alist.get(0);
@@ -25,8 +27,14 @@ function insertEnvironment(){
     		hhkey : highhumi,
     		lhkey : lowhumi
 		},
-		success : whenSuccess,
+		success : 
+			function() {
+			alert("변경되었습니다.");
+			location.reload();
+			
+		},
 		error : whenError,
+
 	});
 	
 }
@@ -43,7 +51,8 @@ function insertEnvironment(){
 	}
 %>
 
-		<button id="environmental-refresh"></button>
+		<button id="environmental-refresh" onClick = "refresh()"></button>
+		
 		<div class="rt-info" id="temperature">
 		
 			<h2>현재 온도</h2>
@@ -64,6 +73,7 @@ function insertEnvironment(){
 		
 		<p id="environmental-text" class="bg-success">원하는 온도를 설정할 수 있습니다.</p>
 		
+	
 			<table id="environmental-table" class="table table-hover">
 				<tr>
 					<td class="left">설정할 최대온도: </td>
@@ -85,6 +95,6 @@ function insertEnvironment(){
 			<p id="environmental-warning" class="bg-warning">
 		    	실내 적정 온도는 약 18도에서 20도 이며, 실내 적정 습도는 70%입니다.
 		    </p>
-			<input id="environmental-submit" onClick="insertEnvironment()" class="btn btn-success" type="button" value="변경">
-		
-
+			<input id="environmental-submit" onClick="insertEnvironment()" class="btn btn-success" type="submit" value="변경">
+	
+</div>
