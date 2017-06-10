@@ -8,7 +8,6 @@ import com.iothome.model.*;
 import com.iothome.main.socket.*;
 
 public class WeatherController {
-	private final static String id = "weather";
 	private ArrayList<WeatherDTO> list;
 	private WeatherDAO dao;
 	private CommonWebSocket client;
@@ -17,10 +16,10 @@ public class WeatherController {
 
 	public WeatherController() {
 		// TODO Auto-generated constructor stub
+		dao = new WeatherDAO();
 	}
 
 	public ArrayList<WeatherDTO> searchWeatherList(String searchKey) {
-		dao = new WeatherDAO();
 		if (searchKey != null) {
 			try {
 				list = dao.searchLocalList(searchKey);
@@ -33,14 +32,16 @@ public class WeatherController {
 		}
 	}
 
-	public void connectWebSocket(String key) { 
-		try{
-			obj = new WeatherJson(id, key);
-			jsonKey = obj.createJsonObj();
-			client = new CommonWebSocket(jsonKey);
-			client.connectWebSocket();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+	public boolean settingWeatherLocal(String[] key) {
+		if (key != null) {
+			try {
+				dao.getLocal(key);
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			return true;
+		} else {
+			return false;
+		} 
 	}
 }

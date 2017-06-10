@@ -16,6 +16,7 @@ $(function() {
 function whenSuccess(resdata) {
 	var result = "";
 	var str = resdata;
+	var k = 0;
 	str = str.replace(/\s+/, "");// 왼쪽 공백제거
 	str = str.replace(/\s+$/g, "");// 오른쪽 공백제거
 	str = str.replace(/\n/g, "");// 행바꿈제거
@@ -28,7 +29,8 @@ function whenSuccess(resdata) {
 	for (i = 1; i <= count; i++) {
 		result += "<li class=\"list-group-item\"><a id = select" + i
 				+ " onclick=\"settinglocal(" + i + ");\" href=\"#\">"
-				+ strArray[i] + "</a></li>"
+				+ strArray[i+k] + " " + strArray[i*2] + "</a></li>";
+		k++
 	}
 	result += "</ul>"
 
@@ -52,7 +54,12 @@ function settinglocal(id) {
 		});
 	$(".list-group").remove();
 }
-function settingSuccess() {
+function settingSuccess(resdata) {
+	if(resdata=true) {
+		alert("설정이 완료 되었습니다.");
+	} else {
+		alert("설정에 오류가 생겼습니다");
+	}
 	$(".list-group").remove();
 }
 function settingError() {

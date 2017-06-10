@@ -18,7 +18,7 @@
 		for (int i = 0; i < count; i++) {
 			dto = list.get(i);
 %>
-<%=dto.getCity()%>,
+<%=dto.getCity()%>,<%=dto.getNation()%>,
 <%
 	}
 

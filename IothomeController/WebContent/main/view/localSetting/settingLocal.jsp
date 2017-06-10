@@ -6,9 +6,13 @@
 <%
 	int count;
 	String key = request.getParameter("key");
+	String temp = key.replace(" ", ",");
+	String[] value = temp.split(",");
+	boolean result;
 	try {
-		controller.connectWebSocket(key);
-	} catch(Exception e){
+		result = controller.settingWeatherLocal(value);
+		%><%=result%><%
+	} catch (Exception e) {
 		e.printStackTrace();
 	}
 %>
