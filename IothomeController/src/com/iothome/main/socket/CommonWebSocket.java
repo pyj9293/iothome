@@ -2,17 +2,17 @@ package com.iothome.main.socket;
 
 import java.net.URI;
 import java.net.URISyntaxException;
-import java.util.Scanner;
 
 import org.java_websocket.client.WebSocketClient;
-import org.java_websocket.drafts.Draft_17;
 import org.java_websocket.handshake.ServerHandshake;
+import org.json.JSONObject;
 
 public class CommonWebSocket {
 	private WebSocketClient client;
 	private String uri;
 	private String key;
 
+	
 	public CommonWebSocket(String key) {
 		// TODO Auto-generated constructor stub
 		this.key = key;
@@ -44,7 +44,8 @@ public class CommonWebSocket {
 				public void onOpen(ServerHandshake arg0) {
 					// TODO Auto-generated method stub
 					System.out.println("A client connected..");
-					this.send(key.toString());
+					System.out.println(key);
+					this.send(key);
 				}
 
 			};
