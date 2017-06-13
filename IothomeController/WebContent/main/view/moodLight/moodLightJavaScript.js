@@ -87,5 +87,10 @@ $(function() {
 		var color = "mood";
 		runAjax(color);
 	});
+
+	$("#club").click(function() {
+		var color = "mood";
+		runAjax(color);
+	});
 	
 });
