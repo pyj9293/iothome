@@ -84,10 +84,8 @@ $(function() {
 	});
 	
 	$("#mood").click(function() {
-		var color = "white";
+		var color = "mood";
 		runAjax(color);
 	});
-	/*function runAjax(color) {
-		alert(color);
-	}*/
+	
 });
