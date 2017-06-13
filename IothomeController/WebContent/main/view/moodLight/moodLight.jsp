@@ -44,6 +44,7 @@ if(color !=null){
 		<button id="o" class="img-circle" style="background-color: orange;"></button>
 		<button id="s" class="img-circle" style="background-color: skyblue;"></button>
 		<button id="w" class="img-circle" style="background-color: white;"></button>
+		<button id="mood" class="img-circle" style="background-image: url(../../resource/color_wheel.jpg);"></button>
 
 		<hr>
 

@@ -14,6 +14,11 @@ public class WeatherDTO {
 		this.city = city;
 		this.nation = nation;
 	}
+	
+	public WeatherDTO(String city, String nation) {
+		this.city = city;
+		this.nation = nation;
+	}
 
 	public int getId() {
 		return id;

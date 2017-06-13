@@ -3,7 +3,6 @@
  */
 
 $(function() {
-	alert("빼엠");
 	$("#memu1").click(function() {
         var offset = $("#headingOne").offset();
         

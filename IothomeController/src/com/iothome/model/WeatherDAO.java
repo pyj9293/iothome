@@ -41,14 +41,12 @@ public class WeatherDAO {
 		return alist;
 	}
 	
-	public void getLocal(String[] searchKey) {
+	public void getLocal(WeatherDTO dto) {
 		Connection con = dbconnect.getConnection();
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
-		city = searchKey[0];
-		nation = searchKey[1];
 		try {
-			sql = "UPDATE WEATHER_LOCAL_TB set city = '" + city + "'," + "nation ='" + nation +"'";
+			sql = "UPDATE WEATHER_LOCAL_TB set city = '" + dto.getCity() + "'," + "nation ='" + dto.getNation() +"'";
 			pstmt = con.prepareStatement(sql);
 			rs = pstmt.executeQuery();
 		} catch (Exception e) {

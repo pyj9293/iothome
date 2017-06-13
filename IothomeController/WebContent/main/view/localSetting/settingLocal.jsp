@@ -8,9 +8,10 @@
 	String key = request.getParameter("key");
 	String temp = key.replace(" ", ",");
 	String[] value = temp.split(",");
+	WeatherDTO dto = new WeatherDTO(value[0],value[1]);
 	boolean result;
 	try {
-		result = controller.settingWeatherLocal(value);
+		result = controller.settingWeatherLocal(dto);
 		%><%=result%><%
 	} catch (Exception e) {
 		e.printStackTrace();

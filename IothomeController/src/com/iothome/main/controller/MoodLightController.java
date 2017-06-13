@@ -1,11 +1,7 @@
 package com.iothome.main.controller;
 
-import java.util.ArrayList;
-import org.java_websocket.client.WebSocketClient;
-import org.json.JSONObject;
-
-import com.iothome.model.*;
-import com.iothome.main.socket.*;
+import com.iothome.main.socket.CommonWebSocket;
+import com.iothome.main.socket.MoodLightJson;
 
 public class MoodLightController {
 	private final static String id = "moodlight";

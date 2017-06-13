@@ -1,13 +1,12 @@
 package com.iothome.main.socket;
 
-import org.json.*;
-public class WeatherJson {
+import org.json.JSONObject;
+public class SilentJson {
 	private String id;
 	private String key;
-	private int count;
 	private JSONObject obj;
 	
-	public WeatherJson(String id, String key) {
+	public SilentJson(String id, String key) {
 		// TODO Auto-generated constructor stub
 		this.id = id;
 		this.key = key;

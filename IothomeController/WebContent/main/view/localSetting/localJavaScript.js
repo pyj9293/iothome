@@ -30,7 +30,7 @@ function whenSuccess(resdata) {
 		result += "<li class=\"list-group-item\"><a id = select" + i
 				+ " onclick=\"settinglocal(" + i + ");\" href=\"#\">"
 				+ strArray[i+k] + " " + strArray[i*2] + "</a></li>";
-		k++
+		k++;
 	}
 	result += "</ul>"
 

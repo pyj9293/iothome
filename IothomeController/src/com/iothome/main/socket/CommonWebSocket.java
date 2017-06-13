@@ -5,7 +5,6 @@ import java.net.URISyntaxException;
 
 import org.java_websocket.client.WebSocketClient;
 import org.java_websocket.handshake.ServerHandshake;
-import org.json.JSONObject;
 
 public class CommonWebSocket {
 	private WebSocketClient client;

@@ -1,18 +1,13 @@
 package com.iothome.main.controller;
 
 import java.util.ArrayList;
-import org.java_websocket.client.WebSocketClient;
-import org.json.JSONObject;
 
-import com.iothome.model.*;
-import com.iothome.main.socket.*;
+import com.iothome.model.WeatherDAO;
+import com.iothome.model.WeatherDTO;
 
 public class WeatherController {
 	private ArrayList<WeatherDTO> list;
 	private WeatherDAO dao;
-	private CommonWebSocket client;
-	private WeatherJson obj;
-	private String jsonKey;
 
 	public WeatherController() {
 		// TODO Auto-generated constructor stub
@@ -32,10 +27,10 @@ public class WeatherController {
 		}
 	}
 
-	public boolean settingWeatherLocal(String[] key) {
-		if (key != null) {
+	public boolean settingWeatherLocal(WeatherDTO dto) {
+		if (dto.getCity() != null ) {
 			try {
-				dao.getLocal(key);
+				dao.getLocal(dto);
 			} catch (Exception e) {
 				e.printStackTrace();
 			}

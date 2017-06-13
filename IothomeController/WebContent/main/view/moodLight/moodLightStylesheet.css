@@ -11,6 +11,9 @@
 	border: 1px solid #ccc;
 	margin-left: 1%;
 	margin-right: 1%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
 }
 
 .img-circle:FOCUS {
