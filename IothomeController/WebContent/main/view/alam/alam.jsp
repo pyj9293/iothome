@@ -14,19 +14,25 @@ ArrayList<AlarmDTO> alist = dao.getMemberList();
 
 try {
 	int key = Integer.parseInt(request.getParameter("key"));
+	String weekday = request.getParameter("weekday");
+	String hours = request.getParameter("hour");
+	String minute = request.getParameter("minute");
 	System.out.println(key);
 	controller.deleteAlarmList(key);
+	controller.connectWebSocket(weekday, hours, minute);
 	} catch (Exception e) {
 }
 %>
-
 <script>
-function deleteAlarm(alarmIndex) {
+function deleteAlarm(alarmIndex, alarmWeekday, alarmHour, alarmMinute) {
 	$.ajax({
 		type : "post",
 		url :  '../alam/alam.jsp',
 		data : {
-    		key : alarmIndex
+    		key : alarmIndex,
+    		weekday : alarmWeekday,
+    		hour : alarmHour,
+    		minute : alarmMinute
 		},
 		success : function() {
 			$("#alam").load(location.href + " #alam");
@@ -58,7 +64,7 @@ function deleteAlarm(alarmIndex) {
 		}
 		out.println("<td style=\"vertical-align: middle; text-align: right;\"><p class=\"ampm\">" + dto.getWeekday() + "</p></td>");
 		out.println("<td><p class=\"time\" style=\"font-size: 45px; font-weight: bold;\">" + hour + ":" +dto.getMinute()+ "</p></td>");
-		out.println("<td style=\"vertical-align: middle; text-align: left; padding-top: 0;\"><input type='image' onClick= 'deleteAlarm(" + dto.getIndex() + ")' img class=\"delete\" src=\"../../resource/delete.png\"/ style=\"width: 30px; vertical-align: bottom; text-align: right;\"></td>");
+		out.println("<td style=\"vertical-align: middle; text-align: left; padding-top: 0;\"><input type='image' onClick= \"deleteAlarm(" + dto.getIndex() + ", '" +dto.getWeekday()+ "', "+dto.getHour()+", "+dto.getMinute()+")\" img class=\"delete\" src=\"../../resource/delete.png\"/ style=\"width: 30px; vertical-align: bottom; text-align: right;\"></td>");
 	}
 }
 %>
