@@ -45,7 +45,7 @@ if(color !=null){
 		<button id="s" class="img-circle" style="background-color: skyblue;"></button>
 		<button id="w" class="img-circle" style="background-color: white;"></button>
 		<button id="mood" class="img-circle" style="background-image: url(../../resource/color_wheel.jpg);"></button>
-		<button id="club" class="img-circle" style="background-image: url(../../resource/mir.jpg);"></button>
+		<button id="club" class="img-circle" style="background-image: url(../../resource/mir.png);"></button>
 
 		<hr>
 
