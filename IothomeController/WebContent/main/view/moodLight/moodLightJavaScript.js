@@ -89,7 +89,7 @@ $(function() {
 	});
 
 	$("#club").click(function() {
-		var color = "mood";
+		var color = "club";
 		runAjax(color);
 	});
 	
