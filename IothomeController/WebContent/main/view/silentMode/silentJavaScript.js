@@ -6,12 +6,21 @@ $(function() {
 		
 		if (option2 == true) {
 			$("#radioDiv label").attr('class','btn btn-success');
-			
-			alert("켜질때");
+			settingSilent("on");
 		} else {
 			$("#radioDiv label").attr('class','btn btn-danger');
-			
-			alert("꺼질때");
+			settingSilent("off");
 		}
 	});
+	function settingSilent(status) {
+		$.ajax({
+			type : "post",
+			url : "../silentMode/settingSilent.jsp",
+			data : {
+				key : status
+			},
+			success : whenSuccess,
+			error : whenError
+		});
+	}
 });

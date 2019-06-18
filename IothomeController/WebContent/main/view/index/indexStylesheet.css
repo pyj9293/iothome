@@ -1,7 +1,7 @@
 @CHARSET "UTF-8";
 
 html {
-    min-width: 610px;
+	min-width: 300px;
 }
 
 a {
@@ -20,10 +20,10 @@ a {
 /* index.jsp */
 #title-div {
     text-align: center;
-    height: 400px;
     background: silver;
+    height: 250px;
     padding: 10px;
-    background-image: url(../../resource/topTitleImg.jpg);
+    background-image: url(../../resource/test.png);
     background-repeat: no-repeat;
     background-size: 100%;
     background-position: center;
@@ -32,7 +32,7 @@ a {
 }
 
 #title-div h1 {
-    padding-top: 150px;
+    padding-top: 120px;
     margin-top: 0px;
 }
 
@@ -51,6 +51,13 @@ a {
 
 .panel-title>a {
 	display: block;
+	border: 0;
+	outline: 0;
+}
+
+.panel-title>a:FOCUS {
+	border: 0;
+	outline: 0;
 }
 
 .panel-body {

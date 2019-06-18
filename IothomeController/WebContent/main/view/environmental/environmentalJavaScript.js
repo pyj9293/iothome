@@ -20,7 +20,9 @@ $(function() {
 	$("#temperature-bar").css("width", temperature + "%");
 	$("#humidity-bar").css("width", humidity + "%");
 	
-	$("#environmental-refresh").click(function(){
-		alert("실시간 표시");	
+	$("#environmental-refresh").click(function refesh(){ 
+			location.reload();
+
+	
 	});
 });

@@ -6,6 +6,7 @@
 	width: 200px;
 	height: 150px;
 	color: black;
+	margin-bottom: 25px;
 	text-shadow: 2px 2px 2px gray;
 }
 
@@ -30,7 +31,13 @@
 }
 
 #temperature {
-	margin-right: 5%
+	margin-left: 6%;
+	margin-right: 3%;
+}
+
+#humidity {
+	margin-left: 3%;
+	margin-right: 6%	
 }
 
 #environmental-table .left {

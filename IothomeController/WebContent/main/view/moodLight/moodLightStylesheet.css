@@ -1,0 +1,43 @@
+@CHARSET "UTF-8";
+
+#colors button:DISABLED {
+	opacity: 0.5;
+}
+
+.img-circle {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #ccc;
+	margin-left: 1%;
+	margin-right: 1%;
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position: center;
+}
+
+.img-circle:FOCUS {
+	outline: 0;
+}
+
+#topButton {
+	text-align: center;
+	padding: 10px;
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-bottom: 20px;
+}
+
+#colors > hr {
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+.colorsBrightness {
+	display: inline-block;
+	font-size: 35px;
+	text-shadow: 1px 1px 2px #ccc;
+	border: 0;
+	outline: 0;
+	background-color: white;
+}
